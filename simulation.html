@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallel Futures - Simulation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container text-center">
+        <!-- Progress Bar Indicator -->
+        <div id="progress-bar" style="color: var(--gray); font-weight: bold; margin-bottom: 1.5rem;">
+            Stage: <span id="current-stage-text">College</span>
+        </div>
+
+        <!-- Dynamic Content Area -->
+        <h2 id="step-title">What do you focus on in college?</h2>
+        <p id="step-description">Your choices will change your future life statistics.</p>
+
+        <!-- Options Grid -->
+        <div id="options-container" class="grid">
+            <!-- Cards go here -->
+        </div>
+
+        <!-- Outcome Screen (Hidden at first) -->
+        <div id="outcome-screen" class="hidden">
+            <h3 style="color: var(--primary); font-size: 1.5rem;">Simulation Complete!</h3>
+            <h2 id="final-job-title" style="margin: 1rem 0;">You became a Machine Learning Engineer</h2>
+            
+            <div style="text-align: left; margin: 1.5rem 0; padding: 1rem; background: #f1f5f9; border-radius: 8px;">
+                <p>🛠️ <strong>Skill Score:</strong> <span id="stat-skill">50</span>/100</p>
+                <p>💰 <strong>Finance Score:</strong> <span id="stat-finance">50</span>/100</p>
+                <p>📈 <strong>Growth Score:</strong> <span id="stat-growth">50</span>/100</p>
+                <p>❤️ <strong>Happiness Score:</strong> <span id="stat-happiness">50</span>/100</p>
+            </div>
+
+            <button id="compare-btn" class="btn">Create Another Future / Compare</button>
+        </div>
+    </div>
+
+    <script src="js/simulation.js"></script>
+</body>
+</html>
