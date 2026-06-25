@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallel Futures - Career Strategy Analytics</title>
+    <title>Parallel Futures - Future Comparison Dashboards</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: white; font-size: 0.95rem; }
@@ -20,10 +20,10 @@
 
     <div class="container" style="max-width: 750px; margin-top: 0.5rem;">
         <h1 style="font-size: 2rem; margin-bottom: 0.25rem;">Parallel Futures</h1>
-        <div style="color: var(--gray); font-weight: bold; font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Career Strategy Simulation Platform</div>
+        <div style="color: var(--gray); font-weight: bold; font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Interactive Career Simulation</div>
 
-        <!-- Metric Bars Architecture (Now with Correct ID Attachments) -->
-        <h4 style="text-align: left; margin: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.25rem;">📊 Comparative Strategy Analytics</h4>
+        <!-- Metric Bars Architecture -->
+        <h4 style="text-align: left; margin: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.25rem;">📊 Future Comparison Dashboard</h4>
         <div class="analytics-block">
             <div style="font-size: 0.85rem; margin-bottom: 0.75rem; text-align: right;">
                 <span class="legend-dot" style="background: #6366f1;"></span> <span id="leg-a">Future A</span> &nbsp;&nbsp;
@@ -31,7 +31,7 @@
             </div>
             
             <div class="bar-wrapper">
-                <div class="bar-label"><span>🛠️ Technical Skill Competency</span> <span id="val-skill">-</span></div>
+                <div class="bar-label"><span>🛠️ Technical Skill </span> <span id="val-skill">-</span></div>
                 <div class="bar-container">
                     <div id="bar-skill-a" class="bar-fill-a"></div>
                     <div id="bar-skill-b" class="bar-fill-b"></div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="bar-wrapper">
-                <div class="bar-label"><span>⚡ Strategy Execution Risk</span> <span id="val-risk">-</span></div>
+                <div class="bar-label"><span>⚡ Career Risk level</span> <span id="val-risk">-</span></div>
                 <div class="bar-container">
                     <div id="bar-risk-a" class="bar-fill-a"></div>
                     <div id="bar-risk-b" class="bar-fill-b"></div>
@@ -67,41 +67,41 @@
             </div>
         </div>
 
-        <!-- Comparative Data Table Matrix -->
-        <h4 style="text-align: left; margin: 1.5rem 0 0.5rem 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.25rem;">⚖️ System Metrics Matrix</h4>
+        <!-- Comparative Data Table -->
+        <h4 style="text-align: left; margin: 1.5rem 0 0.5rem 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.25rem;">⚖️ Perormance Metrices</h4>
         <table>
             <thead>
                 <tr>
                     <th>Strategy Attribute</th>
-                    <th id="heading-timeline-a">Future A Profile</th>
-                    <th id="heading-timeline-b">Future B Profile</th>
+                    <th id="heading-timeline-a">Future A </th>
+                    <th id="heading-timeline-b">Future B </th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td class="metric-name">💼 Simulated Career Profile</td><td id="career-a">-</td><td id="career-b">-</td></tr>
-                <tr><td class="metric-name">🛠️ Technical Skill Competency</td><td id="skill-a">-</td><td id="skill-b">-</td></tr>
+                <tr><td class="metric-name">💼 Career Outcome</td><td id="career-a">-</td><td id="career-b">-</td></tr>
+                <tr><td class="metric-name">🛠️ Technical Skill</td><td id="skill-a">-</td><td id="skill-b">-</td></tr>
                 <tr><td class="metric-name">💰 Long-term Financial Yield</td><td id="finance-a">-</td><td id="finance-b">-</td></tr>
-                <tr><td class="metric-name">⚡ Strategy Execution Risk</td><td id="risk-a">-</td><td id="risk-b">-</td></tr>
+                <tr><td class="metric-name">⚡ Career Risk Level</td><td id="risk-a">-</td><td id="risk-b">-</td></tr>
                 <tr><td class="metric-name">🛡️ Career Path Stability</td><td id="stability-a">-</td><td id="stability-b">-</td></tr>
                 <tr><td class="metric-name">❤️ Overall Happiness Score</td><td id="happiness-a">-</td><td id="happiness-b">-</td></tr>
             </tbody>
         </table>
 
-        <!-- Summary Insights Conclusion Page List Module Array -->
+        <!-- Conclusion Page -->
         <div id="insights-wrapper" class="insight-card hidden">
-            <strong>💡 Platform Strategy Insights Conclusion:</strong>
+            <strong>🌌 Notes From The Multiverse</strong>
             <ul id="insights-list" style="margin: 0.5rem 0 0 0; padding-left: 1.25rem;"></ul>
         </div>
 
-        <!-- Sequential Decisions Progression Map -->
-        <h4 style="text-align: left; margin: 2rem 0 0.5rem 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.25rem;">🛣️ Sequential Decisions Progression Map</h4>
+        <!-- Decisions Progression Map -->
+        <h4 style="text-align: left; margin: 2rem 0 0.5rem 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.25rem;">Career Journey Timeline</h4>
         <div class="timeline-container">
             <div class="timeline-column">
-                <strong style="color: var(--primary);">Future Track A Path:</strong>
+                <strong style="color: var(--primary);">Future Track A:</strong>
                 <div id="timeline-a-flow" style="margin-top:0.5rem;"></div>
             </div>
             <div class="timeline-column">
-                <strong style="color: #0284c7;">Future Track B Path:</strong>
+                <strong style="color: #0284c7;">Future Track B:</strong>
                 <div id="timeline-b-flow" style="margin-top:0.5rem;"></div>
             </div>
         </div>
@@ -112,11 +112,11 @@
             <div id="badges-container"></div>
         </div>
 
-        <!-- Action Control Buttons Grid Elements -->
+        <!-- Action Control Buttons -->
         <div class="flex-buttons">
-            <button id="new-future-btn" class="btn" style="background-color: #0284c7;">Simulate Alternative Future</button>
-            <button id="download-btn" class="btn" style="background-color: #10b981;">📄 Download Executive PDF Report</button>
-            <button id="reset-btn" class="btn" style="background-color: #ef4444;">Reset Repository Data</button>
+            <button id="new-future-btn" class="btn" style="background-color: #0284c7;">Create Alternative Future</button>
+            <button id="download-btn" class="btn" style="background-color: #10b981;">📄 Download PDF Report</button>
+            <button id="reset-btn" class="btn" style="background-color: #ef4444;">Reset Data</button>
         </div>
     </div>
 

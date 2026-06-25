@@ -24,7 +24,7 @@
 
         <!-- Outcome Screen (Hidden at first) -->
         <div id="outcome-screen" class="hidden">
-            <h3 style="color: var(--primary); font-size: 1.5rem;">Simulation Complete!</h3>
+            <h3 style="color: var(--primary); font-size: 1.5rem;">Future Generated!</h3>
             <h2 id="final-job-title" style="margin: 1rem 0;">You became a Machine Learning Engineer</h2>
             
             <div style="text-align: left; margin: 1.5rem 0; padding: 1rem; background: #f1f5f9; border-radius: 8px;">
@@ -39,5 +39,11 @@
     </div>
 
     <script src="js/simulation.js"></script>
+    <script>
+        // Read theme settings from storage instantly on load
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
 </body>
 </html>

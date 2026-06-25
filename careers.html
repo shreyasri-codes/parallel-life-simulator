@@ -7,39 +7,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <div class="container text-center">
         <h2>Choose Your First Future</h2>
-        <p>Pick a starting career path to begin your timeline.</p>
-        
+        <p>Select a career path and see where it could lead.</p>
+
         <div class="grid">
             <div class="card" onclick="selectCareer('AI/ML Engineer')">
                 <h3>🤖 AI/ML Engineer</h3>
-                <p>Build intelligent systems and algorithms.</p>
+                <p>Build intelligent systems and AI products.</p>
             </div>
+
             <div class="card" onclick="selectCareer('Software Engineer')">
                 <h3>💻 Software Engineer</h3>
-                <p>Design apps and scalable systems.</p>
+                <p>Create applications and scalable systems.</p>
             </div>
+
             <div class="card" onclick="selectCareer('Cybersecurity Engineer')">
-                <h3>🔒 Cybersecurity</h3>
-                <p>Protect networks and defend data.</p>
+                <h3>🔒 Cybersecurity Engineer</h3>
+                <p>Protect systems and secure data.</p>
             </div>
+
             <div class="card" onclick="selectCareer('Data Scientist')">
                 <h3>📊 Data Scientist</h3>
-                <p>Find hidden insights in large datasets.</p>
+                <p>Analyze data and uncover insights.</p>
             </div>
         </div>
     </div>
 
     <script src="js/careers.js"></script>
-    <script src="js/careers.js"></script>
+
     <script>
-        // Read theme settings from storage instantly on load
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-mode');
         }
     </script>
-</body>
-</html>
+
 </body>
 </html>

@@ -1,15 +1,15 @@
-// 1. Setup and tracking state
+//  Setup
 let currentStep = 'college'; 
 const stats = JSON.parse(localStorage.getItem('currentSimStats')) || {
     career: 'Software Engineer', skill: 50, finance: 50, growth: 50, happiness: 50
 };
 
-// Initialize advanced product metrics
+// Variables 
 stats.risk = 30; // Base starting risk
 stats.stability = 70; // Base starting stability
-stats.journey = []; // Array to track user decisions text for the timeline view
+stats.journey = []; // Array to track user decisions for the timeline view
 
-// 2. Grab HTML elements
+//  Grab HTML elements
 const stepTitle = document.getElementById('step-title');
 const stepDescription = document.getElementById('step-description');
 const optionsContainer = document.getElementById('options-container');
@@ -20,7 +20,7 @@ if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
 }
 
-// 3. Advanced Choices Data Definition
+//  Advanced Choices Data Definition
 const stageData = {
     college: [
         { title: 'DSA Master', text: '📚 Focus on DSA', desc: 'Master coding patterns.', stats: { skill: 25, finance: 15, growth: 10, happiness: -10, risk: -5, stability: 15 } },
@@ -54,7 +54,7 @@ const specializations = {
     ]
 };
 
-// Rich End-Report Profiles Matrix Data
+// End-Report Profiles Data
 const careerProfiles = {
     'AI/ML Engineer': { title: 'Senior Machine Learning Architect', location: 'Bangalore (Tech Hub)', salary: '20–35 LPA', skills: 'Python, PyTorch, LLMs, Deep Learning', style: 'Hybrid / Flexible', outlook: 'Excellent (High Growth Demand)' },
     'Software Engineer': { title: 'Lead Full-Stack Cloud Engineer', location: 'Hyderabad / Remote', salary: '15–28 LPA', skills: 'System Design, AWS, Node.js, React', style: 'Fully Remote or Hybrid', outlook: 'Very High (Stable Industry Backbone)' },
@@ -90,7 +90,7 @@ function renderStage() {
 }
 
 function handleChoice(chosenTitle, bonusStats) {
-    // Save decision name into structural timeline path array
+    // Save decision name into structural timeline array
     stats.journey.push(chosenTitle);
 
     for (let key in bonusStats) {
@@ -116,11 +116,11 @@ function showResults() {
     stepDescription.classList.add('hidden');
     optionsContainer.classList.add('hidden');
     
-    // Fetch high-fidelity job description object profile
+    // Fetch job description object profile
     const profile = careerProfiles[stats.career] || careerProfiles['Software Engineer'];
-    stats.finalTitle = profile.title; // Save full senior level title context
+    stats.finalTitle = profile.title;
 
-    // Rebuild outcome screen cleanly with advanced properties text layout fields
+    // Rebuild outcome screen cleanly
     outcomeScreen.innerHTML = `
         <h3 style="color: var(--primary); font-size: 1.3rem; margin-top:0;">Simulation Complete!</h3>
         <h2 style="margin: 0.5rem 0; font-size: 1.8rem; color: var(--dark);">${profile.title}</h2>
@@ -146,7 +146,13 @@ function showResults() {
     outcomeScreen.classList.remove('hidden');
 
     let timelines = JSON.parse(localStorage.getItem('savedTimelines')) || [];
-    timelines.push(stats);
+
+timelines.push(stats);
+
+// Keep only the latest two simulations
+if (timelines.length > 2) {
+    timelines = timelines.slice(-2);
+}
     localStorage.setItem('savedTimelines', JSON.stringify(timelines));
 
     document.getElementById('compare-btn').onclick = function() {
