@@ -1,5 +1,9 @@
 
 ## Parallel Life Simulator
+<img width="1280" height="849" alt="image" src="https://github.com/user-attachments/assets/9e014c9b-dbd2-40fa-9450-913b9734e77f" />
+<img width="1280" height="767" alt="image" src="https://github.com/user-attachments/assets/cb9573b8-2c32-49b6-9ab4-9d698bbd0e1a" />
+<img width="1280" height="933" alt="image" src="https://github.com/user-attachments/assets/1dbafe5d-55be-4d3d-9026-b6314020c66c" />
+<img width="720" height="1280" alt="image" src="https://github.com/user-attachments/assets/d8291439-e60b-479f-9c6d-70be55bf1a10" />
 
 A fun experiment that lets users explore alternate versions of their future.
 
